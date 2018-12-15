@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <display-name>Java 3 Volume Calculator</display-name>
+  <servlet>
+    <servlet-name>VolumeCalc</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.VolumeCalc</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>VolumeCalc2</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.VolumeCalc2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>VolumeCalc3</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.VolumeCalc3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VolumeCalc</servlet-name>
+    <url-pattern>/VolumeCalc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VolumeCalc2</servlet-name>
+    <url-pattern>/VolumeCalc2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VolumeCalc3</servlet-name>
+    <url-pattern>/VolumeCalc3</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

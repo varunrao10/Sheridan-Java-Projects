@@ -1,0 +1,57 @@
+<html>
+<head>
+</head>
+<body>
+<h2>Name:Varun Rao Student #: 991498928</h2>
+<form action="PVCalculator" method="get">
+	<table>
+	
+		<tr><td><font face="verdana" size="2px">PV technology:</font></td>
+		<td><input list = "pvtech"  name = "pvtech">
+			<datalist id = "pvtech">	
+				<option value="Crystalline silicon">
+				<option value="CIS">
+				<option value="CdTe">
+				<option value="Hybrid">
+			</datalist>
+		</td>
+		</tr>
+		
+		<tr><td><font face="verdana" size="2px">Enter peak PV power</font></td>
+		<td><input type="Number"name="peakpv"></td>
+		<td><font face="verdana" size="2px">Wp</font></td>
+		</tr>
+		
+		<tr><td><font face="verdana" size="2px">Battery voltage:</font></td>
+		<td><input type="number" name="batteryvoltage"></td>
+		<td><font face="verdana" size="2px">Capacity:</font></td>
+		<td><input type="number" name ="capacity"></td>
+		<td><font face="verdana" size="2px">Ah</font></td>
+		</tr>
+		
+		<tr><td><font face="verdana" size="2px">Enter daily consumption</font></td>
+		<td><input type="Number"name="dailyconsumption"></td>
+		</tr>    
+		
+		<tr><td><font face="verdana" size="2px">Estimated System Losses</font></td>
+		<td><input type="Number"name="estsyslosses"></td>
+		</tr>
+		
+		<tr><td><font face="verdana" size="2px">Module Inclination[0;90]</font></td>
+		<td><input type="Number"name="moduleinc"></td>
+		</tr>
+		
+		<tr><td><font face="verdana" size="2px">Orientation[-180;180]</font></td>
+		<td><input type="Number"name="orientation"></td>
+		</tr>
+		
+		
+		
+	
+	</table>
+	<input type="submit" value="Calculate">
+
+</form>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>measurement</short-name>
+	<description></description>
+	<display-name>measurement</display-name>
+	<uri>http://www.sheridancollege.com/customtag</uri>
+	
+	<tag>
+		<name>measurements</name>
+		<tag-class>sheridan.ejava.assignments.Measurements</tag-class>
+		<attribute>
+			<name>measurementType</name>
+		</attribute>
+		<body-content>empty</body-content>
+	</tag>
+
+</taglib>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <display-name>Java 3 ReusableRocket</display-name>
+  <servlet>
+    <servlet-name>ReusableRocket</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.ReusableRocket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReusableRocket</servlet-name>
+    <url-pattern>/ReusableRocket</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>rocketregistration.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

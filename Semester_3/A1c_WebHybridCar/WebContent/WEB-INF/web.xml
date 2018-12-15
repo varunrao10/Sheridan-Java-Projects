@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <display-name>Java 3 HybridCar</display-name>
+  <servlet>
+    <servlet-name>HybridCar</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.HybridCar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HybridCar</servlet-name>
+    <url-pattern>/HybridCar</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>registration.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

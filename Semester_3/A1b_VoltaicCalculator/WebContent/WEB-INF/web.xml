@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <display-name>Java 3 PVCalculator</display-name>
+  <servlet>
+    <servlet-name>PVCalculator</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.PVCalculator</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PVEfficiency</servlet-name>
+    <servlet-class>ca.sheridancollege.assignments.PVEfficiency</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PVCalculator</servlet-name>
+    <url-pattern>/PVCalculator</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PVEfficiency</servlet-name>
+    <url-pattern>/PVEfficiency</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

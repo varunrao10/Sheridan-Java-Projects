@@ -1,0 +1,21 @@
+<web-app>  
+ <servlet>  
+    <servlet-name>AdminServlet</servlet-name>  
+    <servlet-class>com.example.controller.AdminServlet</servlet-class>  
+  </servlet>  
+  
+  <servlet-mapping>  
+    <servlet-name>AdminServlet</servlet-name>  
+    <url-pattern>/servlet1</url-pattern>  
+  </servlet-mapping>  
+    
+ <filter>  
+  <filter-name>MyFilter</filter-name>  
+  <filter-class>com.example.filter.MyFilter</filter-class>  
+  </filter>  
+  <filter-mapping>  
+  	<url-pattern>/servlet1</url-pattern>  
+  </filter-mapping>  
+  
+    
+</web-app>  
