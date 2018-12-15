@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+
+<BorderPane prefHeight="331.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="raovarun.moviedb.controller.HomeScreenController">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#OpenMovieFile" text="Open Movie File" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </MenuBar>
+         </top>
+      
+   <center>
+      <GridPane alignment="center" hgap="10" prefHeight="426.0" prefWidth="540.0" vgap="10">
+      	
+         <children>
+            <Text text="Welcome to the Movie Database" GridPane.columnIndex="2"  GridPane.rowIndex="2" />
+            <ListView fx:id="movieListView" GridPane.columnIndex="2"  GridPane.rowIndex="3" prefHeight="300.0"  prefWidth="400.0"/>
+             <HBox spacing="20" alignment="bottom_right" GridPane.columnIndex="2"  GridPane.rowIndex="4"  >
+               <children>
+                  <Button mnemonicParsing="false" onAction="#SaveMovies" text="Save to File"  />
+				  <Button mnemonicParsing="false" onAction="#CreateMovie" text="Create" />
+                  <Button mnemonicParsing="false" onAction="#EditMovie" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#DeleteMovie" text="Delete" />
+               </children>
+            </HBox>
+           <Text fx:id="name" GridPane.columnIndex="2" GridPane.rowIndex="5" text = "Varun Rao"/>
+         </children>
+      </GridPane>
+   </center>
+      </BorderPane>

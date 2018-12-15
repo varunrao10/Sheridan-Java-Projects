@@ -1,0 +1,7 @@
+movieName,isbnNumber,releaseDate,location,genre,rating,duration,price
+Return of the Jedi,143,2019-01-01,Canada,Action,3,100,10
+Inception,143,2019-01-01,Canada,Action,3,100,10
+Batman,144,2019-01-02,Canada,Action,3,100,10
+Pokemon,145,2019-01-03,Canada,Action,3,100,10
+Spiderman,146,2019-01-04,Canada,Action,3,100,10
+Interstellar,0,2018-01-01,International,Sci-Fi,5,200,1
