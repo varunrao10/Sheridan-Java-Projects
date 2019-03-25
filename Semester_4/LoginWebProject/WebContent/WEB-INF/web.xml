@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <web-app>
+  <display-name>Java 3 HelloYouServlet </display-name>
+  <servlet>
+    <servlet-name>HelloYouServlet</servlet-name>
+    <servlet-class>ca.sheridancollege.practice.HelloYouServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloYouServlet</servlet-name>
+    <url-pattern>/HelloYouServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
