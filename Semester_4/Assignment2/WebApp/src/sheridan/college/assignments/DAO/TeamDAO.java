@@ -1,3 +1,4 @@
+// Name: Varun Rao  Student Number: 991498928
 package sheridan.college.assignments.DAO;
 
 import java.sql.*;
@@ -9,12 +10,12 @@ import sheridan.college.assignments.model.Team;
 public class TeamDAO {
 	private DBManager dbConnect = new DBManager();
 
-
 	public ArrayList<Team> GetTeams() {
 
-
+		//Team Array List 
 		ArrayList<Team> teamList = new ArrayList<Team>();
 
+		//Connect to database get TeamID and TeamName values and use while loop to set the values, add to team list array
 		try {
 			ResultSet rst = dbConnect.executeQuery("Select TeamID,TeamName From Team");
 

@@ -9,16 +9,18 @@
 	</head>
 	
 	<body>
-		<form action = "ShowPlayers" method = "Post"> 
+		<form action = "ProcessTeamServlet" method = "Post"> 
 	
 			
-				<select>
+				Team: <select name = "teamSelect">
 				<c:forEach var="team" items="${teams}">
 					<option><c:out value="${team.teamName}" /></option>
 				 </c:forEach>
 				</select>
 				
-			<input type = "submit" name = "addPlayer" value = "add player"/> 
+			<input type = "submit" name = "Action" value = "add"/>
+			<input type = "submit" name = "Action" value = "edit"/>
+			 
 		</form>
 	
 	

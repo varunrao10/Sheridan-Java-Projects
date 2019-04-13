@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>FinalAssignment</display-name>
+  <servlet>
+    <servlet-name>RegisterClientServlet</servlet-name>
+    <servlet-class>sheridan.college.assignments.servlet.RegisterClientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterClientServlet</servlet-name>
+    <url-pattern>/RegisterClientServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HallAdminServlet</servlet-name>
+    <servlet-class>sheridan.college.assignments.servlet.HallAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HallAdminServlet</servlet-name>
+    <url-pattern>/HallAdminServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RegisterClient</servlet-name>
+    <jsp-file>/RegisterClient.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterClient</servlet-name>
+    <url-pattern>/RegisterClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HallAdmin</servlet-name>
+    <jsp-file>/HallAdmin.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HallAdmin</servlet-name>
+    <url-pattern>/HallAdmin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AddNewHall</servlet-name>
+    <jsp-file>/AddNewHall.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddNewHall</servlet-name>
+    <url-pattern>/AddNewHall</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>FirstScreen.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sheridan.college.assignments;
+package sheridan.college.assignments.DAO;
 
 import java.sql.*;
 
 public class DBManager {
-	String conn = "jdbc:mysql://localhost:3306/hockeyleague?autoReconnect=True&useSSL=False";
+	String conn = "jdbc:mysql://localhost:3306/bookingsys?autoReconnect=True&useSSL=False";
 	String user = "root";
 	String pass = "pokemon_1998";
 

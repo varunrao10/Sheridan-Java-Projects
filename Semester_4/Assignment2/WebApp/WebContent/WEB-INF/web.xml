@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-  <display-name>HockeyLeagueWebApp</display-name>
-  
-  <servlet>
-    <servlet-name>TeamServlet</servlet-name>
-    <servlet-class>sheridan.college.assignments.TeamServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TeamServlet</servlet-name>
-    <url-pattern>/TeamServlet</url-pattern>
-  </servlet-mapping>
-  
-   <servlet>
-    <servlet-name>ShowTeams</servlet-name>
-    <servlet-class>sheridan.college.assignments.ShowTeams</servlet-class>
-    <jsp-file>/ShowTeams.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ShowTeams</servlet-name>
-    <url-pattern>/ShowTeams</url-pattern>
-  </servlet-mapping>
+	<display-name>HockeyLeagueWebApp</display-name>
 
-  <welcome-file-list>
-    <welcome-file>TeamServlet</welcome-file>
-  </welcome-file-list>
+	<servlet>
+		<servlet-name>TeamServlet</servlet-name>
+		<servlet-class>sheridan.college.assignments.TeamServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeamServlet</servlet-name>
+		<url-pattern>/TeamServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProcessTeamServlet</servlet-name>
+		<servlet-class>sheridan.college.assignments.ProcessTeamServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessTeamServlet</servlet-name>
+		<url-pattern>/ProcessTeamServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProcessPlayerServlet</servlet-name>
+		<servlet-class>sheridan.college.assignments.ProcessPlayerServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessPlayerServlet</servlet-name>
+		<url-pattern>/ProcessPlayerServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowTeams</servlet-name>
+		<servlet-class>sheridan.college.assignments.ShowTeams</servlet-class>
+		<jsp-file>/ShowTeams.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowTeams</servlet-name>
+		<url-pattern>/ShowTeams</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditPlayer</servlet-name>
+		<servlet-class>sheridan.college.assignments.EditPlayer
+		</servlet-class>
+		<jsp-file>/EditPlayer.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditPlayer</servlet-name>
+		<url-pattern>/EditPlayer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddPlayer</servlet-name>
+		<servlet-class>sheridan.college.assignments.AddPlayer</servlet-class>
+		<jsp-file>/AddPlayer.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddPlayer</servlet-name>
+		<url-pattern>/AddPlayer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ListPlayers</servlet-name>
+		<servlet-class>sheridan.college.assignments.ListPlayers</servlet-class>
+		<jsp-file>/ListPlayers.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListPlayers</servlet-name>
+		<url-pattern>/ListPlayers</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>TeamServlet</welcome-file>
+	</welcome-file-list>
 </web-app>

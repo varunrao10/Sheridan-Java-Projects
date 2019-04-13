@@ -11,6 +11,9 @@ CREATE TABLE `hockeyleague`.`team` (
   CREATE TABLE `hockeyleague`.`player` (
   `PlayerID` INT NOT NULL,
   `PlayerName` VARCHAR(50) NOT NULL,
+  `PlayerAddress` VARCHAR(50) NOT NULL,
+  `PlayerRole` VARCHAR(50) NOT NULL,  
+  `Active` boolean NOT NULL,
   `TeamID` VARCHAR(45) NULL,
   PRIMARY KEY (`PlayerID`),
   UNIQUE INDEX `PlayerName_UNIQUE` (`PlayerName` ASC) VISIBLE);

@@ -1,3 +1,4 @@
+// Name: Varun Rao  Student Number: 991498928
 package sheridan.college.assignments.model;
 
 import java.io.Serializable;

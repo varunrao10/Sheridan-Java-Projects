@@ -1,3 +1,4 @@
+// Name: Varun Rao  Student Number: 991498928
 package sheridan.college.assignments;
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import sheridan.college.assignments.DAO.TeamDAO;
 import sheridan.college.assignments.model.Team;
 
-
+//The starting point of the application
 public class TeamServlet extends HttpServlet {
 	
 	
