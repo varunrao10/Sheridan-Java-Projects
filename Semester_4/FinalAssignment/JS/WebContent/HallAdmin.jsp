@@ -9,6 +9,7 @@
 <title>HallAdmin</title>
 </head>
 <body>
+	<%@ include file ="Header.jsp" %>
 	<form action = "AddNewHall" method = "Post">
 		<button type = "submit">Add New Hall</button>
 	</form>

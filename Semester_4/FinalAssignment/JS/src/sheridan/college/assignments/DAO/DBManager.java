@@ -10,7 +10,7 @@ import java.sql.*;
 public class DBManager {
 	String conn = "jdbc:mysql://localhost:3306/bookingsys?autoReconnect=True&useSSL=False";
 	String user = "root";
-	String pass = "pokemon_1998";
+	String pass = "Canary_322";
 
 	public Connection getConnection() {
 		Connection con = null;
