@@ -63,6 +63,20 @@ public class HallDAO {
 		return true;
 	}
 	
+	public int GetHallID(String hallName) {
+		int hallID = -1;
+		try {
+			ResultSet rst = dbConnect
+					.executeQuery("select HallID From bookingsys.hall Where HallName = '" + hallName + "'"); 
+			rst.next();
+			hallID = rst.getInt(1);
+		}
+
+		catch (SQLException e) {
+			System.out.println("Error when trying to execute query" + e.getMessage());
+		}
+		return hallID;
+	}
 	
 	public boolean SaveHall(Hall h) {
 

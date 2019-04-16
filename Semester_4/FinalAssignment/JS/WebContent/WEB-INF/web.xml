@@ -10,6 +10,15 @@
     <url-pattern>/RegisterClientServlet</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name>BookHallServlet</servlet-name>
+    <servlet-class>sheridan.college.assignments.servlet.BookHallServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookHallServlet</servlet-name>
+    <url-pattern>/BookHallServlet</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <servlet-name>HallAdminServlet</servlet-name>
     <servlet-class>sheridan.college.assignments.servlet.HallAdminServlet</servlet-class>
@@ -35,6 +44,15 @@
   <servlet-mapping>
     <servlet-name>HallAdmin</servlet-name>
     <url-pattern>/HallAdmin</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>BookHall</servlet-name>
+    <jsp-file>/BookHall.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookHall</servlet-name>
+    <url-pattern>/BookHall</url-pattern>
   </servlet-mapping>
   
   <servlet>

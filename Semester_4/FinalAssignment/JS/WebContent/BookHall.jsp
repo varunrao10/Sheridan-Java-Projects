@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +10,27 @@
 </head>
 <body>
 	<%@ include file ="Header.jsp" %>
-	<h1>Book Hall</h1>
-	Select Hall: <input type = "text" name = "Selecthall"></input><br/>
-	Select Client: <input type = "text" name = "Selectclient"></input><br/>
-	Enter Date: <input type = "date" name = "Date"></input><br/><br/>
-	<button type = "button">Book It</button>
+	<form action = "BookHallServlet" method = "Post">
 
+	<p>Select Client : 
+		<select name="ClientSelection">
+			<c:forEach var="client" items="${clients}">
+			   		<option value="${client.value.clientName}">${client.value.clientName}</option>
+			</c:forEach>
+		</select>
+	</p>
+
+	<p>Select Hall :  
+		<select name="HallSelection"> 
+			<c:forEach var="hall" items="${halls}">
+			   		<option value="${hall.value.hallName}">${hall.value.hallName}</option>
+			</c:forEach>
+		</select><br/>
+	</p>
+	
+	Select Date: <input type = "date" name = "BookingDate"/><br/><br/>
+		<button type = "submit" name = "Submit" >Book It</button>
+
+	</form>
 </body>
 </html>

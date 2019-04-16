@@ -3,26 +3,28 @@ package sheridan.college.assignments.model;
 import java.io.Serializable;
 
 public class Client implements Serializable {
-	private int ClientID;
-	private String ClientName;
-	private String CreditCard;
-	public int getClientID() {
-		return ClientID;
-	}
+	private int clientID;
+	private String clientName;
+	private String creditCard;
 	
+	public int getClientID() {
+		return clientID;
+	}
 	public void setClientID(int clientID) {
-		ClientID = clientID;
+		this.clientID = clientID;
 	}
 	public String getClientName() {
-		return ClientName;
+		return clientName;
 	}
 	public void setClientName(String clientName) {
-		ClientName = clientName;
+		this.clientName = clientName;
 	}
 	public String getCreditCard() {
-		return CreditCard;
+		return creditCard;
 	}
 	public void setCreditCard(String creditCard) {
-		CreditCard = creditCard;
+		this.creditCard = creditCard;
 	}
+	
+
 }

@@ -4,33 +4,34 @@ import java.util.Date;
 import java.io.Serializable;
 
 public class Booking implements Serializable {
-	private int BookingID;
-	private int HallID;
-	private int ClientID;
-	private Date Date = new Date();
-	public int getBookingID() {
-		return BookingID;
-	}
+	private int bookingID;
+	private int hallID;
+	private int clientID;
+	private Date bookingDate = new Date();
 	
+	public int getBookingID() {
+		return bookingID;
+	}
 	public void setBookingID(int bookingID) {
-		BookingID = bookingID;
+		this.bookingID = bookingID;
 	}
 	public int getHallID() {
-		return HallID;
+		return hallID;
 	}
 	public void setHallID(int hallID) {
-		HallID = hallID;
+		this.hallID = hallID;
 	}
 	public int getClientID() {
-		return ClientID;
+		return clientID;
 	}
 	public void setClientID(int clientID) {
-		ClientID = clientID;
+		this.clientID = clientID;
 	}
-	public Date getDate() {
-		return Date;
+	public Date getBookingDate() {
+		return bookingDate;
 	}
-	public void setDate(Date date) {
-		Date = date;
+	public void setBookingDate(Date bookingDate) {
+		this.bookingDate = bookingDate;
 	}
+
 }
