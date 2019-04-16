@@ -32,6 +32,10 @@ ADD UNIQUE INDEX `HallName_UNIQUE` (`HallName` ASC) VISIBLE;
 ADD INDEX `HallID_idx` (`HallID` ASC) VISIBLE,
 ADD INDEX `ClientID_idx` (`ClientID` ASC) VISIBLE;
 ;
+
+ALTER TABLE `bookingsys`.`booking`  ADD UNIQUE `unique_booking`(`HallID`, `ClientID`, `BookingDate`);
+
+
 ALTER TABLE `bookingsys`.`booking` 
 ADD CONSTRAINT `HallID`
   FOREIGN KEY (`HallID`)
