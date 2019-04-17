@@ -1,5 +1,8 @@
+/*
+ * By Varun Rao
+ * Description: HallDAO
+ */
 package sheridan.college.assignments.DAO;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -43,6 +46,7 @@ public class HallDAO {
 	public boolean AddHall(Hall h) throws Exception {
 
 		try {
+			//Get The Next HallID
 			ResultSet rst = dbConnect
 					.executeQuery("select IFNULL(max(HallID)+1,1) as HallID FROM bookingsys.hall"); 
 			rst.next();

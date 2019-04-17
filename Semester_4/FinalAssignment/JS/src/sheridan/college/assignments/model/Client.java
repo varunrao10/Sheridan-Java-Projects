@@ -1,5 +1,9 @@
-package sheridan.college.assignments.model;
+/*
+  	By Varun Rao
+ 	Description: Client Object
+*/
 
+package sheridan.college.assignments.model;
 import java.io.Serializable;
 
 public class Client implements Serializable {

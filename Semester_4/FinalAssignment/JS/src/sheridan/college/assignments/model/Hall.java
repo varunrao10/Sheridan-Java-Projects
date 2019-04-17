@@ -1,5 +1,9 @@
-package sheridan.college.assignments.model;
+/*
+  By Varun Rao
+  Description: Hall Object
+ */
 
+package sheridan.college.assignments.model;
 import java.io.Serializable;
 
 public class Hall implements Serializable {

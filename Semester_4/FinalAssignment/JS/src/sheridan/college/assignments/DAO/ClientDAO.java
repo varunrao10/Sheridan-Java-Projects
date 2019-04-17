@@ -1,5 +1,9 @@
-package sheridan.college.assignments.DAO;
+/*
+ * By Varun Rao 
+ * Description: ClientDAO lets us connect to the database
+ */
 
+package sheridan.college.assignments.DAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -17,10 +21,12 @@ public class ClientDAO {
 		Map clientList = new HashMap();
 
 		try {
+			
+			//Select following columns from the client table from our database
 			String sql = "Select ClientID, ClientName, CreditCard from bookingsys.client";
-
 			ResultSet rst = dbConnect.executeQuery(sql);
 
+			//Loop through record set, put columns into Client Object and Push it to the Map
 			while (rst.next()) {
 				Client c = new Client();
 				int clientID = rst.getInt(1);
@@ -41,6 +47,7 @@ public class ClientDAO {
 		return clientList;
 	}
 	
+	
 	public int GetClientID(String clientName) {
 		int clientID = -1;
 		try {
@@ -57,15 +64,13 @@ public class ClientDAO {
 	}
 	
 	public boolean AddClient(Client c) throws Exception {
-
+		//Get The Next ClientID
 		try {
 			ResultSet rst = dbConnect
 					.executeQuery("select IFNULL(max(ClientID)+1,1) as ClientID FROM bookingsys.client"); 
 			rst.next();
 			c.setClientID(rst.getInt(1));
 
-		
-			
 			String insertSQL = "Insert into bookingsys.client(ClientID, ClientName, CreditCard) values("
 					+ c.getClientID() + ",'" + c.getClientName() + "','" + c.getCreditCard() + "')";
 			dbConnect.executeUpdate(insertSQL);

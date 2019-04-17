@@ -1,5 +1,6 @@
-/*
- *
+/* By Varun Rao 
+ * Description: BookingDAO which lets us connect to the booking tables in our database
+ 
  */
 
 package sheridan.college.assignments.DAO;
@@ -22,15 +23,19 @@ public class BookingDAO {
 	public boolean AddBooking(Booking b) throws Exception {
 
 		try {
+			
+			//Get The Next BookingID
 			ResultSet rst = dbConnect
 					.executeQuery("select IFNULL(max(BookingID)+1,1) as BookingID FROM bookingsys.booking"); 
 			rst.next();
 			b.setBookingID(rst.getInt(1));
 
+			//Changed date format so it can get stored in MYSQL
 			Date bDate = b.getBookingDate();
 			DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");  
 			String strDate = dateFormat.format(bDate); 
 	
+			//Insert Input into the Booking Tables
 			String insertSQL = "insert into bookingsys.booking (BookingID, HallID, ClientID, BookingDate) VALUES ("
 					+ b.getBookingID() + "," + b.getHallID() + "," + b.getClientID() + ",STR_TO_DATE('" + strDate + "', '%m/%d/%Y')" + ")";
 			System.out.println(insertSQL);

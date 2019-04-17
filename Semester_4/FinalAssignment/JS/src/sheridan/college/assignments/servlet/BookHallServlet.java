@@ -1,4 +1,7 @@
-//By Varun Rao
+/*
+ * By Varun Rao 
+ * Description: BookHallServlet
+ */
 
 
 package sheridan.college.assignments.servlet;
@@ -28,12 +31,16 @@ public class BookHallServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//Get a hold of Session object
 		HttpSession sess = request.getSession();
 		
 		String buttonSubmit = request.getParameter("Submit");
+		
 		HallDAO hDAO = new HallDAO();
 		ClientDAO cDAO = new ClientDAO();
 		
+		//Coming here from firstscreen
 		if(buttonSubmit == null) {
 				Map hallMap =  hDAO.GetHalls();
 				sess.setAttribute("halls", hallMap);
@@ -42,13 +49,16 @@ public class BookHallServlet extends HttpServlet {
 				sess.setAttribute("clients", clientMap);
 		}
 		
+		//Coming from bookhall.jsp
 		else{	
 			String clientSelected = request.getParameter("ClientSelection");
 			String hallSelected = request.getParameter("HallSelection");
 			String bookingDatestr = request.getParameter("BookingDate");
 			
+			//Converting bookingDate to date type
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			Date bookingDate = null;
+			
 			try {
 				 bookingDate = sdf.parse(bookingDatestr);
 			}
@@ -66,6 +76,7 @@ public class BookHallServlet extends HttpServlet {
 			b.setBookingDate(bookingDate);
 			
 			BookingDAO bDAO = new BookingDAO();
+			
 			String message = "booking done successfully";
 			
 			try {

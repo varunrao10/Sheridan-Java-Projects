@@ -1,3 +1,8 @@
+/*
+ * By Varun Rao
+ * Description: Booking Object
+ */
+
 package sheridan.college.assignments.model;
 import java.util.Date;
 

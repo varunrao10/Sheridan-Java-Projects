@@ -1,3 +1,7 @@
+/*
+  	By Varun Rao
+ 	Description: Hall Admin Servlet
+*/
 package sheridan.college.assignments.servlet;
 
 import java.io.IOException;
@@ -17,28 +21,34 @@ import sheridan.college.assignments.model.Hall;
 
 public class HallAdminServlet extends HttpServlet {
 	
- 
+
     public HallAdminServlet() {
    
     }
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		HttpSession sess = request.getSession();
+		
 		String hallName = request.getParameter("HallName");
 		String hallID = request.getParameter("HallID");
 		String hallAction = request.getParameter("HallButton");
+		
 		HallDAO hDAO = new HallDAO();
 		
+		//Coming from firstscreen
 		if(hallName == null) {
 			Map hallMap =  hDAO.GetHalls();
 			sess.setAttribute("halls", hallMap);
 		}
 		
+		//Doing an Add, Edit, or Delete
 		else {
 			
 			Map hallMap = (HashMap) sess.getAttribute("halls");
 			
+			//Coming here from AddNewHall.jsp
 			if(hallAction.equals("Add")) {
 				Hall h = new Hall();
 				h.setHallName(hallName);
@@ -53,6 +63,7 @@ public class HallAdminServlet extends HttpServlet {
 				}
 			}
 			
+			//Coming from HallAdmin.jsp
 			else if(hallAction.equals("Edit")) {
 				int hID = Integer.parseInt(hallID);
 				Hall h = (Hall) hallMap.get(hID);
@@ -65,6 +76,7 @@ public class HallAdminServlet extends HttpServlet {
 				}
 			}
 			
+			//Coming from HallAdmin.jsp
 			else {
 				int hID = Integer.parseInt(hallID);
 				Hall h = (Hall) hallMap.get(hID);
