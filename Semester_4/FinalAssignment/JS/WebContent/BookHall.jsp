@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Booking</title>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 	<%@ include file ="Header.jsp" %>
@@ -32,5 +33,7 @@
 		<button type = "submit" name = "Submit" >Book It</button>
 
 	</form>
+	
+	<p>${message}</p>
 </body>
 </html>

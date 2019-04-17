@@ -20,7 +20,6 @@ public class RegisterClientServlet extends HttpServlet {
        
     }
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession sess = request.getSession();
 		
@@ -29,7 +28,12 @@ public class RegisterClientServlet extends HttpServlet {
 		c.setCreditCard(request.getParameter("CreditCard"));
 		
 		ClientDAO cDAO = new ClientDAO();
-		cDAO.AddClient(c);
+		try {
+			cDAO.AddClient(c);
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 		response.sendRedirect("FirstScreen.jsp");
 		

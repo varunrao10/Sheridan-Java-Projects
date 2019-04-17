@@ -45,20 +45,35 @@ public class HallAdminServlet extends HttpServlet {
 				int nextIndex = hallMap.size() + 1;
 				h.setHallID(nextIndex);
 				hallMap.put(nextIndex, h);
+				try {
 				hDAO.AddHall(h);
+				}
+				catch(Exception e) {
+					System.out.println(e.getMessage());
+				}
 			}
 			
 			else if(hallAction.equals("Edit")) {
 				int hID = Integer.parseInt(hallID);
 				Hall h = (Hall) hallMap.get(hID);
 				h.setHallName(hallName);
+				try {
 				hDAO.SaveHall(h);
+				}
+				catch(Exception e) {
+					System.out.println(e.getMessage());
+				}
 			}
 			
 			else {
 				int hID = Integer.parseInt(hallID);
 				Hall h = (Hall) hallMap.get(hID);
+				try {
 				hDAO.DeleteHall(h);
+				}
+				catch(Exception e) {
+					System.out.println(e.getMessage());
+				}
 				hallMap.remove(hID);
 				
 			}

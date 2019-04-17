@@ -6,10 +6,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>First Screen</title>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-	<%@ include file ="Header.jsp" %>
+
 	<h1>Booking System</h1>
+	
+		<%@ include file ="Header.jsp" %>
 	
 	<form action = "BookHallServlet" method = "Post">
 		<button type = "submit" name = "BookHall">Book Hall</button>

@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>HallAdmin</title>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 	<%@ include file ="Header.jsp" %>

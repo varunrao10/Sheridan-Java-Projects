@@ -1,3 +1,6 @@
+//By Varun Rao
+
+
 package sheridan.college.assignments.servlet;
 
 import java.io.IOException;
@@ -32,16 +35,14 @@ public class BookHallServlet extends HttpServlet {
 		ClientDAO cDAO = new ClientDAO();
 		
 		if(buttonSubmit == null) {
-			
-	
-				
 				Map hallMap =  hDAO.GetHalls();
 				sess.setAttribute("halls", hallMap);
 				
 				Map clientMap =  cDAO.GetClients();
 				sess.setAttribute("clients", clientMap);
-		}else{
-			
+		}
+		
+		else{	
 			String clientSelected = request.getParameter("ClientSelection");
 			String hallSelected = request.getParameter("HallSelection");
 			String bookingDatestr = request.getParameter("BookingDate");
@@ -65,8 +66,17 @@ public class BookHallServlet extends HttpServlet {
 			b.setBookingDate(bookingDate);
 			
 			BookingDAO bDAO = new BookingDAO();
-			bDAO.AddBooking(b);
-
+			String message = "booking done successfully";
+			
+			try {
+				bDAO.AddBooking(b);
+			}
+			
+			catch(Exception e) {
+				message = "booking already exists, please try on a different date";
+			}
+	
+			sess.setAttribute("message", message);
 		}
 		
 		response.sendRedirect("BookHall.jsp");

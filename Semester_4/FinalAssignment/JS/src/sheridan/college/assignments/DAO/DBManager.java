@@ -7,6 +7,7 @@ package sheridan.college.assignments.DAO;
 
 import java.sql.*;
 
+//This is to access my own database via my username and password
 public class DBManager {
 	String conn = "jdbc:mysql://localhost:3306/bookingsys?autoReconnect=True&useSSL=False";
 	String user = "root";
@@ -46,7 +47,7 @@ public class DBManager {
 		return rs;
 	}
 
-	public int executeUpdate(String sql) {
+	public int executeUpdate(String sql) throws Exception {
 		int r = 0;
 		try {
 			Connection con = getConnection();
@@ -55,6 +56,7 @@ public class DBManager {
 
 		} catch (Exception e) {
 			System.out.println("Error executing query " + e);
+			throw new Exception(e);
 		}
 		return r;
 	}

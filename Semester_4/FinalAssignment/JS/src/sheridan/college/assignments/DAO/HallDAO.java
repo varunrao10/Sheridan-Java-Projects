@@ -17,7 +17,7 @@ public class HallDAO {
 		Map hallList = new HashMap();
 
 		try {
-
+			
 			String sql = "Select HallID, HallName From bookingsys.hall";
 
 			ResultSet rst = dbConnect.executeQuery(sql);
@@ -40,7 +40,7 @@ public class HallDAO {
 		return hallList;
 	}
 	
-	public boolean AddHall(Hall h) {
+	public boolean AddHall(Hall h) throws Exception {
 
 		try {
 			ResultSet rst = dbConnect
@@ -48,18 +48,14 @@ public class HallDAO {
 			rst.next();
 			h.setHallID(rst.getInt(1));
 
-		
-			
 			String insertSQL = "Insert into bookingsys.hall(HallID, HallName) values("
 					+ h.getHallID() + ",'" + h.getHallName() + "')";
 			dbConnect.executeUpdate(insertSQL);
-
 		}
 
 		catch (SQLException e) {
 			System.out.println("Error when trying to execute query" + e.getMessage());
 		}
-
 		return true;
 	}
 	
@@ -78,7 +74,7 @@ public class HallDAO {
 		return hallID;
 	}
 	
-	public boolean SaveHall(Hall h) {
+	public boolean SaveHall(Hall h) throws Exception {
 
 		String updateSQL = "Update bookingsys.hall SET HallName = '" + h.getHallName()	+ "' Where hallID = " + h.getHallID();
 		dbConnect.executeUpdate(updateSQL);
@@ -86,7 +82,7 @@ public class HallDAO {
 		return true;
 	}
 	
-	public boolean DeleteHall(Hall h) {
+	public boolean DeleteHall(Hall h) throws Exception {
 
 		String deleteSQL = "Delete from bookingsys.hall  Where HallID = " + h.getHallID();
 		dbConnect.executeUpdate(deleteSQL);

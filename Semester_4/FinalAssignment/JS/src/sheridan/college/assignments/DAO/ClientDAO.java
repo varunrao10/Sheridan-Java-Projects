@@ -17,7 +17,6 @@ public class ClientDAO {
 		Map clientList = new HashMap();
 
 		try {
-
 			String sql = "Select ClientID, ClientName, CreditCard from bookingsys.client";
 
 			ResultSet rst = dbConnect.executeQuery(sql);
@@ -28,7 +27,6 @@ public class ClientDAO {
 				String clientName = rst.getString(2);
 				String creditCard = rst.getString(3);
 				
-
 				c.setClientID(clientID);
 				c.setClientName(clientName);
 				c.setCreditCard(creditCard);
@@ -58,8 +56,7 @@ public class ClientDAO {
 		return clientID;
 	}
 	
-	
-	public boolean AddClient(Client c) {
+	public boolean AddClient(Client c) throws Exception {
 
 		try {
 			ResultSet rst = dbConnect
